@@ -1,8 +1,30 @@
 *{
   margin:0 auto;
+  --dot-color: #c4c4c4;
+  --marked-dot-color: #636363;
 }
+.progress-bar-dot{
+  border-radius: 100%;
+  position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+  background-color: var(--dot-color);
+}
+.progress-bar-dot-marked{
+  background-color: var(--marked-dot-color) !important;
+}
+.square:before{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.square{
+  position: relative;
+  width: 50%;
+}
+.col-2{padding: 0px !important;}
 .dotted-progress-bar{
-  width: 100%;
-  height: 100px;
-  background-color: gray;
+  margin: 0 auto;
 }
