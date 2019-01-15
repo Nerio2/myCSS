@@ -10,6 +10,6 @@ usage:
 > \<div class="dotted-progress-bar progress-4"\>\</div\>  
 > \<div class="dotted-progress-bar progress-5"\>\</div\>  
 result:  
-![alt Dotted progress bars](images/dotted-progress-bars.PNG)  
+<img src="images/dotted-progress-bars.PNG" height="400"/>  
 
 # Ideas:  
