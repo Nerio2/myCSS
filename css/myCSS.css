@@ -1,7 +1,11 @@
-*{
-  margin:0 auto;
+:root{
   --dot-color: #c4c4c4;
   --marked-dot-color: #636363;
+  --progress: 0%;
+  --progress-fade: 0%;
+}
+*{
+  margin:0 auto;
 }
 .progress-bar-dot{
   border-radius: 100%;
@@ -27,4 +31,7 @@
 .col-2{padding: 0px !important;}
 .dotted-progress-bar{
   margin: 0 auto;
+}
+.progress-bar-dot-mixed{
+  background-image: linear-gradient(to right, #636363 0%, #636363 var(--progress), #c4c4c4 var(--progress-fade), #c4c4c4 100%) !important;
 }
