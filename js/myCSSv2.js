@@ -4,7 +4,16 @@ dottedProgressBars.forEach((elem, index)=>{
 });
 
 function init(obj){
-  const progress=parseFloat(obj.innerHTML);
+  let progress=0;
+  if(obj.innerHTML.indexOf('/')!=-1){
+    progress=parseFloat(obj.innerHTML.slice(0,obj.innerHTML.indexOf('/')));
+    let den=parseFloat(obj.innerHTML.slice(obj.innerHTML.indexOf('/')+1));
+    let den2=den/5;
+    progress/=den2;
+  }else
+    progress=parseFloat(obj.innerHTML);
+  if(progress>5)progress=5;
+  else if(progress<0)progress=0;
   obj.classList.add('row');
   let content="";
   for(i=0;i<5;i++)

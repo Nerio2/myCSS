@@ -15,4 +15,7 @@ Update v1.0:
 progress has been moved to div.  
 progress can be decimal.  
 > \<div class="dotted-progress-bar"\>3.4\</div\>  
+Update v1.1:  
+scope added.  
+> \<div class="dotted-progress-bar"\>3.7/4.3\</div\>  
 # Ideas:  
