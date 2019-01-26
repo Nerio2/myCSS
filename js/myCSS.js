@@ -1,16 +1,14 @@
-$(()=>{
-  var dottedProgressBars=$(".dotted-progress-bar");
-  dottedProgressBars.each(function(index, el) {
-    init($(el));
-  });
-
+var dottedProgressBars=$(".dotted-progress-bar");
+dottedProgressBars.each((index, el)=>{
+  init($(el));
 });
 
 function init(obj){
   var progress=parseFloat($(obj).html());
   $(obj).addClass('row');
   var div="";
-  for(i=0;i<5;i++)div+='<div class="col-2 square"><div class="progress-bar-dot"></div></div>';
+  for(i=0;i<5;i++)
+    div+='<div class="col-2 square"><div class="progress-bar-dot"></div></div>';
   $(obj).html(div);
   var divs=$(obj).children();
   for(var i=0;i<parseInt(progress);i++){
@@ -19,11 +17,11 @@ function init(obj){
   if(progress%1>0){
     var decimalProgress=(progress-parseInt(progress))*100;
     $(divs[parseInt(progress)]).children()
-    .addClass('progress-bar-dot-mixed');
+      .addClass('progress-bar-dot-mixed');
     $(divs[parseInt(progress)]).children()
-    .css("--progress",decimalProgress-5+"%")
-    .css("--progress-fade",decimalProgress+5+"%");
+      .css("--progress",decimalProgress-5+"%")
+      .css("--progress-fade",decimalProgress+5+"%");
   }
 }
 
-//.css("background","-ms-linear-gradient(left, #c4c4c4 0%, #c4c4c4 45%, #636363 55%, #636363 100%);");
+//old version with jquery
