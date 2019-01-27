@@ -5,13 +5,17 @@ dottedProgressBars.forEach((elem, index)=>{
 
 function init(obj){
   let progress=0;
-  if(obj.innerHTML.indexOf('/')!=-1){
-    progress=parseFloat(obj.innerHTML.slice(0,obj.innerHTML.indexOf('/')));
-    let den=parseFloat(obj.innerHTML.slice(obj.innerHTML.indexOf('/')+1));
+  const value=obj.innerHTML;
+  if(value.indexOf('%')!=-1){
+    progress=parseFloat(value)/20;
+  }
+  else if(value.indexOf('/')!=-1){
+    progress=parseFloat(value.slice(0,value.indexOf('/')));
+    let den=parseFloat(value.slice(value.indexOf('/')+1));
     let den2=den/5;
     progress/=den2;
   }else
-    progress=parseFloat(obj.innerHTML);
+    progress=parseFloat(value);
   if(progress>5)progress=5;
   else if(progress<0)progress=0;
   obj.classList.add('row');

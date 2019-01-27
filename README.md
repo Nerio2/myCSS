@@ -18,4 +18,7 @@ progress can be decimal.
 Update v1.1:  
 scope added.  
 > \<div class="dotted-progress-bar"\>3.7/4.3\</div\>  
+Update v1.2:  
+percentage value  
+> > \<div class="dotted-progress-bar"\>37.5%\</div\>  
 # Ideas:  
